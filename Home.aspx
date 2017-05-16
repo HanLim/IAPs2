@@ -4,20 +4,26 @@
     <style>
         #intro {
             padding: 30px;
-            margin-top: 700px;
+            margin-top: 600px;
+            
             /*background-color: #92a8d1;*/
             background-image: url("../img/bg/intro-banner.jpg");
             height: 250px;
+        }
+        #homeContent {
+            font-family: 'Righteous', cursive;
         }
         #intro > * {
             text-align: center;
         }
         #introName {
-            margin-top: 15px;
-            font-size: 3em;
+            margin: 10px;
+            font-size: 5em;
         }
         #introDesc {
-            font-size: 2em;
+            margin: 15px;
+            font-family: 'Ceviche One', cursive;
+            font-size: 2.5em;
         }
         #banner {
             position: fixed;
@@ -67,7 +73,7 @@
 </asp:Content>
 
 <asp:Content ID="content" ContentPlaceHolderID="content" Runat="Server">
-    <img id="banner" src="img/bg/homepage-banner.jpg" />
+    <img id="banner" src="img/bg/homepage-banner1.png" />
     <div id="intro">
         <p id="introName">
             HL Phone Store

@@ -5,29 +5,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Russo+One|Ceviche+One|Righteous" rel="stylesheet"/>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form id="form1" runat="server">
     <header>
-        <div id="logoDiv">
-            <img id="logo" src="../img/icon/logo-icon.png" />
-            <h1 class="headerElements">HL Phone Store</h1>
-        </div>
+        <a href="Home.aspx">
+            <div id="logoDiv">
+                <img id="logo" src="../img/icon/logo-icon.png" />
+                <h1 class="headerElements">HL Phone Store</h1>
+            </div>
+        </a>
         <div class="headerElements stickRight">
             <span>Discover</span>
-            <span>Sign Up</span>
-            <span>Sign In</span>
+            <asp:LinkButton ID="account" onclick="checkLogIn" runat="server"></asp:LinkButton>
         </div>
     </header>
-    <form id="form1" runat="server">
+    
         <main>
             <asp:ContentPlaceHolder id="content" runat="server">
         
             </asp:ContentPlaceHolder>
         </main>
-    </form>
+    
     <footer>
         <div>
             <p>About us</p>
@@ -40,6 +42,7 @@
             <img src="../img/icon/insta-icon.png" />
         </div>
     </footer>
+    </form>
 </body>
 </html>
 <style>
@@ -48,6 +51,9 @@
         color: inherit;
     }
     /*html*/
+    #logo {
+        height: 45px;
+    }
     html {
         font-family: 'Russo One', sans-serif;
     }
@@ -60,17 +66,14 @@
     #logoDiv > *{
         display: inline-block;
         padding: 0;
-        margin: 0;
+        margin: 2px 10px;
     }
     #logoDiv > h1 {
         position: absolute;
         top: 5px;
         left: 50px;
     }
-    #logo {
-        height: 45px;
-        margin: 2px 10px;
-    }
+    
     header {
         /*background-color: #92a8d1;*/
         /*background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
@@ -81,15 +84,16 @@
         top: 0;
         height: 50px;
         justify-content: space-between;
+        z-index: 1;
     }
     .headerElements {
         color: white;
     }
-    .stickRight > span {
+    .stickRight > * {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .stickRight > span:hover {
+    .stickRight > *:hover {
         color: #92a8d1;
         cursor: pointer;
     }
@@ -107,8 +111,7 @@
 
     /*main*/
     main{
-        /*height: 1500px;
-        background-color:azure;*/
+        z-index: -1;
     }
     /*footer*/
     footer {
@@ -117,6 +120,7 @@
         height: 150px;
         display: flex;
         padding: 30px 150px;
+        z-index: -1;
     }
     footer > div {
         flex: 1;
