@@ -12,7 +12,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         if (loggedIn)
         {
-            account.Text = "Profile";
+            account.Text = Page.User.Identity.Name;
         }
         else
         {

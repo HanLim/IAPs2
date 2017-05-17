@@ -2,26 +2,15 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
+        a#account{
+            color:#92a8d1;
+        }
         main {
             color: #3d3d3d;
             margin-top: 50px;
             height: 750px;
-            background-color:#999999;
+            /*background-color:#999999;*/
         }
-
-        /*main:before {
-            background-image: url("../img/bg/header-banner.jpg");
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            z-index: -2;
-            display: block;
-            background-size:cover;
-            width: 100%;
-            height: 100%;
-            filter: blur(10px);
-        }*/
         #accHandler {
             display: flex;
             height: 100%;
@@ -34,7 +23,7 @@
             
         }
         #signUp {
-            border-left: #ddd solid 1px;
+            border-left: #ddd solid 2px;
         }
         #signIn > p, #signUp > p {
             text-align:center;
