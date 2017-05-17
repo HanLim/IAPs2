@@ -33,8 +33,12 @@
     
     <footer>
         <div>
-            <p>About us</p>
-            <p>Page report</p>
+            <p>Contact Us</p>
+            <ul>
+                <li>+603-88881322</li>
+                <li>support@hlstore.com</li>
+                <li>322, Jln A, <br /> Taman B, <br /> 48000 Selangor.</li>
+            </ul>
         </div>
         <div>
             <p>Find us:</p>

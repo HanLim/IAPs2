@@ -40,8 +40,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
     <div id="accHandler">
         <p id="username" runat="server"></p>
-        <p id="spending">Total Spending: </p>
-        <asp:Button ID="Button1" onclick="userLogout" runat="server" Text="Download Spending History"></asp:Button>
+        <asp:TextBox ID="oldpw" runat="server" placeholder="Old Password" TextMode="Password" ></asp:TextBox>
+        <asp:TextBox ID="pw" runat="server" placeholder="New Password" TextMode="Password" ></asp:TextBox>
+        <asp:TextBox ID="pw2" runat="server" placeholder="ConfirmPassword" TextMode="Password" ></asp:TextBox>
+        <asp:Button ID="Submit" onclick="changepw" runat="server" Text="Change Password"></asp:Button>
+        <p id="err" runat="server"></p>
         <asp:Button ID="logout" onclick="userLogout" runat="server" Text="Logout"></asp:Button>
     </div>
 </asp:Content>

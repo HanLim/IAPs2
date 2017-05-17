@@ -73,7 +73,7 @@
 </asp:Content>
 
 <asp:Content ID="content" ContentPlaceHolderID="content" Runat="Server">
-    <img id="banner" src="img/bg/homepage-banner1.png" />
+    <img id="banner" src="img/bg/homepage-banner2.jpg" />
     <div id="intro">
         <p id="introName">
             HL Phone Store

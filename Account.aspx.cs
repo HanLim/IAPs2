@@ -121,8 +121,8 @@ public partial class Account : System.Web.UI.Page
                                 EnableSsl = true
                             })
                             {
-                                MailMessage msg = new MailMessage("dummyAccForIap@gmail.com",
-                        "choohanlim96@gmail.com", "Account Verification", "Please go to the following URL to activate your account. " + Request.Url.Authority + "/Verification.aspx?username=" + signupUserName.Text + "&token=" + token);
+                                MailMessage msg = new MailMessage("dummyAccForIap@gmail.com", signupEmailInput.Text,
+                                    "Account Verification", "Please go to the following URL to activate your account. " + Request.Url.Authority + "/Verification.aspx?username=" + signupUserName.Text + "&token=" + token);
 
                                 msg.IsBodyHtml = true;
                                 client.Send(msg);
