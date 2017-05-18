@@ -49,12 +49,11 @@ public partial class Cart : System.Web.UI.Page
                 }
 
                 File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "a.txt", Receipt);
-                downloadLink.Attributes.Add("href", AppDomain.CurrentDomain.BaseDirectory + @"\" + "a.txt");
+                downloadLink.Attributes.Add("href", AppDomain.CurrentDomain.BaseDirectory + @"\" + "receipt.txt");
                 downloadLink.Attributes.Add("style", "display: block");
                 System.IO.File.Delete(AppDomain.CurrentDomain.BaseDirectory + @"\" + "a.txt" + "a.txt");
-                //Session.Clear();
-                //Session.Abandon();
-                //Response.Redirect(Request.Url.AbsolutePath);
+                Session.Clear();
+                Session.Abandon();
             }
         }
     }
@@ -77,6 +76,7 @@ public partial class Cart : System.Web.UI.Page
                 HtmlTableCell cell = new HtmlTableCell();
                 HtmlTableCell remove = new HtmlTableCell();
                 Button removebtn = new Button();
+                removebtn.Text = "Remove";
                 removebtn.Attributes.Add("type", "button");
                 removebtn.Attributes.Add("value", "remove");
                 removebtn.UseSubmitBehavior = false;

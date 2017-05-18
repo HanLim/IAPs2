@@ -36,11 +36,18 @@ public partial class Profiles : System.Web.UI.Page
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@oldpw", oldpw.Text.Trim());
-                        cmd.Parameters.AddWithValue("@pw", oldpw.Text.Trim());
-                        cmd.Parameters.AddWithValue("@username", Page.User.Identity.Name.Trim());
+                        cmd.Parameters.AddWithValue("@pw", pw.Text.Trim());
+                        cmd.Parameters.AddWithValue("@username", Page.User.Identity.Name);
                         cmd.Connection = con;
                         con.Open();
-
+                        if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
+                        {
+                            err.InnerHtml = "<font color='#ff5050'>User not found</font>";
+                        }
+                        else
+                        {
+                            err.InnerHtml = "Password changed.";
+                        }
                         con.Close();
                     }
                 }

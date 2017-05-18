@@ -18,7 +18,6 @@
                 <h1 class="headerElements">HL Phone Store</h1>
             </div>
         </a>
-        http://localhost:55672/Verification.aspx?username=choohanlim96&token=o9iyyani7sxgfpq
         <div class="headerElements stickRight">
             <span><a href="Discover.aspx">Discover</a></span>
             <asp:LinkButton ID="account" onclick="checkLogIn" runat="server"></asp:LinkButton>

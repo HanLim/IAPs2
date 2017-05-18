@@ -4,7 +4,7 @@
     <style>
         main {
             color: #3d3d3d;
-            height: 750px;
+            min-height: 750px;
             margin-top: 50px;
         }
         main > * {
@@ -61,9 +61,6 @@
             margin: 15px auto;
             background-color: #ccc;
         }
-        #content_downloadLink {
-            display: none;
-        }
         .err {
             color: #ff5050;
         }
@@ -82,7 +79,7 @@
             <asp:TextBox ID="address" runat="server" placeholder="Mailing Address"></asp:TextBox>
             <asp:Button ID="pay" runat="server" Text="Confirm Payment" onclick="Pay"/>
             <p id="err" class="err" runat="server"></p>
-            <a id="downloadLink" runat="server" download="true">Download Recept here</a>
+            <a id="downloadLink" runat="server" download="true" style="display: none">Download Recept here</a>
         </div>
     </div>
     
