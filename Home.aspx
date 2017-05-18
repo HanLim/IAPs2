@@ -82,7 +82,7 @@
             Best Online Smart Phone Seller in Town
         </p>
         <p id="shopLink">
-            <a href="#">Shop Now</a>
+            <asp:linkButton runat="server" ID="showNow" OnClick="shop">Shop Now</asp:linkButton>
         </p>
     </div>
     <div id="homeContent">

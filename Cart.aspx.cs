@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -22,9 +23,22 @@ public partial class Cart : System.Web.UI.Page
         }
         else
         {
+            int n;
+            bool isNumeric = int.TryParse(secCode.Text.ToString(), out n);
+
+            Regex r = new Regex("^[a-zA-Z0-9]*$");
+
             if (cardNum.Text.Length !=16 || secCode.Text.Length !=3)
             {
                 err.InnerHtml = "<font color='#ff5050'>Invalid Input</font>";
+            }
+            else if (!isNumeric)
+            {
+                err.InnerHtml = "<font color='#ff5050'>Wrong security code format</font>";
+            }
+            else if (r.IsMatch(cardNum.Text.ToString()))
+            {
+                err.InnerHtml = "<font color='#ff5050'>Wrong card number code</font>";
             }
             else
             {
